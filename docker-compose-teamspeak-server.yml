@@ -1,6 +1,6 @@
 services:
   teamspeak:
-    image: teamspeak:3.13.6
+    image: teamspeak:latest
     restart: unless-stopped
     ports:
       - 9987:9987/udp

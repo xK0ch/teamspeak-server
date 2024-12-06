@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    triggers {
-        pollSCM('H * * * *')
-    }
-
     environment {
         TEAMSPEAK_DB_PASSWORD = credentials('teamspeak-db-password')
     }
