@@ -1,6 +1,7 @@
 services:
   teamspeak:
     image: teamspeak:latest
+    container_name: teamspeak-server
     restart: unless-stopped
     ports:
       - 9987:9987/udp
@@ -20,6 +21,7 @@ services:
 
   teamspeak-db:
     image: mariadb:11.2.6
+    container_name: teamspeak-db
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${TEAMSPEAK_DB_PASSWORD}
