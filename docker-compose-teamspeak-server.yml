@@ -17,7 +17,7 @@ services:
       TS3SERVER_DB_WAITUNTILREADY: 30
       TS3SERVER_LICENSE: accept
     volumes:
-      - /home/fkoch/teamspeak/data:/var/ts3server/
+      - ./data:/var/ts3server/
 
   teamspeak-db:
     image: mariadb:11.2.6
@@ -27,4 +27,4 @@ services:
       MYSQL_ROOT_PASSWORD: ${TEAMSPEAK_DB_PASSWORD}
       MYSQL_DATABASE: teamspeak
     volumes:
-      - /home/fkoch/teamspeak/sql:/var/lib/mysql/
+      - ./sql:/var/lib/mysql/
